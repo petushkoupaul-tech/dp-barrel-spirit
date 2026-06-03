@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DP Barrel & Spirit</title>
+    <meta
+      name="description"
+      content="Ремесленные деревянные бочки DP Barrel & Spirit: натуральная древесина, ручная работа, выдержка и характер времени."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Главная навигация">
+      <a class="brand-mark" href="#top" aria-label="DP Barrel & Spirit">
+        <span>DP</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">О проекте</a>
+        <a href="#collection">Коллекция</a>
+        <a href="#details">Детали</a>
+        <a href="#workshop">Мастерская</a>
+        <a href="#aging">Выдержка</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-reveal" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="Медиа/01 Главный экран/главный-баннер.png"
+          alt="Ремесленная деревянная бочка DP Barrel & Spirit в тёплом свете"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Crafted by Nature. Aged by Time.</p>
+          <h1 id="hero-title">DP Barrel &amp; Spirit</h1>
+          <p>
+            Ремесленные деревянные бочки, созданные с вниманием к материалу,
+            деталям и качеству.
+          </p>
+          <a class="text-link" href="#collection">Смотреть коллекцию</a>
+        </div>
+      </section>
+
+      <section class="about image-section section-reveal" id="about" aria-labelledby="about-title">
+        <img
+          src="Медиа/02 О проекте/о проекте.png"
+          alt="Деревянная бочка DP Barrel & Spirit с кружками"
+        />
+        <div class="section-overlay"></div>
+        <div class="section-copy">
+          <h2 id="about-title">О проекте</h2>
+          <p>
+            DP Barrel &amp; Spirit — ремесленный проект о деревянных бочках,
+            натуральных материалах и времени.
+          </p>
+          <p>
+            Каждое изделие создаётся вручную: от выбора древесины до финальной
+            отделки, гравировки и сборки.
+          </p>
+          <p>
+            Мы работаем с натуральными и экологически чистыми материалами,
+            сохраняя живую текстуру дерева и индивидуальность каждой
+            формы.
+          </p>
+          <p>
+            На любой вкус, задачу и стиль — с неизменным вниманием к качеству и
+            деталям.
+          </p>
+        </div>
+      </section>
+
+      <section class="collection section-reveal" id="collection" aria-labelledby="collection-title">
+        <div class="section-head">
+          <h2 id="collection-title">Коллекция изделий</h2>
+          <div class="materials-note">
+            <h3>Материалы и характеристики</h3>
+            <div class="materials-intro">
+              <p>
+                Каждое изделие создаётся с вниманием к материалу, форме и
+                характеру древесины.
+              </p>
+              <p>
+                Для покрытия поверхности применяются авторские технологии
+                обработки, основанные на натуральных и долговечных материалах.
+              </p>
+              <p>
+                Благодаря этой технике каждая бочка приобретает свой уникальный
+                и неповторимый вид, а текстура дерева открывается с новой
+                стороны.
+              </p>
+            </div>
+            <div class="materials-grid">
+              <div class="material-group">
+                <h4>Используемые породы древесины</h4>
+                <ul>
+                  <li>дуб</li>
+                  <li>ясень</li>
+                  <li>акация</li>
+                </ul>
+              </div>
+              <div class="material-group">
+                <h4>Комбинированные варианты</h4>
+                <ul>
+                  <li>акация / ясень</li>
+                  <li>дуб / ясень</li>
+                  <li>акация / дуб / ясень</li>
+                </ul>
+              </div>
+              <div class="material-group wide">
+                <h4>Форма и геометрия</h4>
+                <ul>
+                  <li>Испанская форма Sherry Butt</li>
+                  <li>
+                    Вытянутая форма с удлинённой клёпкой, вдохновлённая
+                    традиционной геометрией испанских бочек.
+                  </li>
+                  <li>Классическая форма ("Русский стиль")</li>
+                  <li>
+                    Традиционная округлая форма со сбалансированными
+                    пропорциями.
+                  </li>
+                </ul>
+              </div>
+              <div class="material-group">
+                <h4>Объёмы</h4>
+                <ul>
+                  <li>от 2 до 70 литров</li>
+                </ul>
+              </div>
+              <div class="material-group">
+                <h4>Металлические элементы</h4>
+                <p>Краны и комплектующие из пищевой нержавеющей стали.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-shell">
+          <div class="carousel-controls" aria-label="Навигация по коллекции изделий">
+            <button class="carousel-button" type="button" data-carousel-target="collection-carousel" data-direction="prev" aria-label="Назад">‹</button>
+            <button class="carousel-button" type="button" data-carousel-target="collection-carousel" data-direction="next" aria-label="Вперёд">›</button>
+          </div>
+          <div class="rail gallery carousel-track" id="collection-carousel" aria-label="Коллекция деревянных бочек">
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/01.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/02.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/03.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/04.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/05.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/06.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/07.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/08.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/09.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/10.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/11.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/12.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="collection">
+              <div class="image-frame"><img src="Медиа/03 Коллекция изделий/13.png" alt="Фотография изделия DP Barrel & Spirit" /></div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="details section-reveal" id="details" aria-labelledby="details-title">
+        <div class="section-head narrow">
+          <h2 id="details-title">Детали</h2>
+          <p>
+            Ручная работа проявляется в деталях: в линии гравировки, подгонке
+            клёпки, фактуре древесины и точности каждого элемента.
+          </p>
+          <div class="owner-list" aria-label="Комплектация изделия и преимущества">
+            <div>
+              <h3>Каждое изделие комплектуется</h3>
+              <ul>
+                <li>кастомной пробкой</li>
+                <li>оригинальной подставкой</li>
+                <li>декоративными элементами (по усмотрению заказчика)</li>
+                <li>краном из пищевой нержавеющей стали</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Что получает владелец</h3>
+              <ul>
+                <li>различные варианты оформления</li>
+                <li>внимание к деталям</li>
+                <li>долговечную конструкцию</li>
+                <li>выразительную текстуру и внешний вид</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="detail-layout gallery" aria-label="Детали изделий">
+          <figure class="gallery-item" data-gallery="details">
+            <div class="image-frame"><img src="Медиа/04 Детали/01.png" alt="Фотография детали изделия DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="details">
+            <div class="image-frame"><img src="Медиа/04 Детали/02.jpg" alt="Фотография детали изделия DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="details">
+            <div class="image-frame"><img src="Медиа/04 Детали/03.png" alt="Фотография детали изделия DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="details">
+            <div class="image-frame"><img src="Медиа/04 Детали/04.png" alt="Фотография детали изделия DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="details">
+            <div class="image-frame"><img src="Медиа/04 Детали/05.png" alt="Фотография детали изделия DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="details">
+            <div class="image-frame"><img src="Медиа/04 Детали/06.png" alt="Фотография детали изделия DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="details">
+            <div class="image-frame"><img src="Медиа/04 Детали/07.png" alt="Фотография детали изделия DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="details">
+            <div class="image-frame"><img src="Медиа/04 Детали/08.png" alt="Фотография детали изделия DP Barrel & Spirit" /></div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="workshop section-reveal" id="workshop" aria-labelledby="workshop-title">
+        <div class="workshop-copy">
+          <div>
+            <h2 id="workshop-title">Мастерская и ремесло</h2>
+          </div>
+          <div class="workshop-text">
+            <p>
+              Путь от необработанной древесины до готовой бочки проходит через
+              отбор материала, подготовку клёпок, обработку, сборку и обжиг.
+            </p>
+            <p>
+              Натуральный обжиг и внимательная подготовка помогают сформировать
+              будущий вкусоароматический характер изделия.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-shell">
+          <div class="carousel-controls" aria-label="Навигация по мастерской">
+            <button class="carousel-button" type="button" data-carousel-target="workshop-carousel" data-direction="prev" aria-label="Назад">‹</button>
+            <button class="carousel-button" type="button" data-carousel-target="workshop-carousel" data-direction="next" aria-label="Вперёд">›</button>
+          </div>
+          <div class="workshop-gallery gallery carousel-track" id="workshop-carousel" aria-label="Материалы и пространство мастерской">
+            <figure class="gallery-item" data-gallery="workshop">
+              <div class="image-frame"><img src="Медиа/05 Мастерская и ремесло/01.jpg" alt="Фотография мастерской DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="workshop">
+              <div class="image-frame"><img src="Медиа/05 Мастерская и ремесло/02.png" alt="Фотография мастерской DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="workshop">
+              <div class="image-frame"><img src="Медиа/05 Мастерская и ремесло/04.png" alt="Фотография мастерской DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="workshop">
+              <div class="image-frame"><img src="Медиа/05 Мастерская и ремесло/05.png" alt="Фотография мастерской DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="workshop">
+              <div class="image-frame"><img src="Медиа/05 Мастерская и ремесло/06.png" alt="Фотография мастерской DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="workshop">
+              <div class="image-frame"><img src="Медиа/05 Мастерская и ремесло/07.jpg" alt="Фотография мастерской DP Barrel & Spirit" /></div>
+            </figure>
+            <figure class="gallery-item" data-gallery="workshop">
+              <div class="image-frame"><img src="Медиа/05 Мастерская и ремесло/f03052f0-d837-4377-8465-a629fd494608.png" alt="Фотография мастерской DP Barrel & Spirit" /></div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="aging section-reveal" id="aging" aria-labelledby="aging-title">
+        <div class="aging-copy">
+          <h2 id="aging-title">Выдержка и использование</h2>
+          <p>
+            Для формирования будущих вкусовых качеств заливаемого в бочку
+            напитка используются реальные методы ферментационной и
+            оксидационной выдержки.
+          </p>
+          <p>
+            В зависимости от назначения и объёма все бочки проходят стадии
+            выдержки креплёными винами и дистиллятами.
+          </p>
+          <div class="drink-columns" aria-label="Напитки для выдержки">
+            <div>
+              <h3>Испанские креплёные вина</h3>
+              <ul>
+                <li>Pedro Ximénez (PX)</li>
+                <li>Amontillado</li>
+                <li>Fino</li>
+                <li>Oloroso</li>
+                <li>Cream</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Португальские вина</h3>
+              <ul>
+                <li>White Port</li>
+                <li>Ruby Port</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Также используются</h3>
+              <ul>
+                <li>Москатель</li>
+                <li>Marsala</li>
+                <li>Ром</li>
+                <li>Натуральная ежевичная наливка</li>
+                <li>Абрикосовка</li>
+                <li>Сливовица</li>
+                <li>Кальвадос</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            Каждая выдержка оставляет собственный след в напитке: фруктовые
+            оттенки, винные ноты, пряность и глубину характера.
+          </p>
+          <p class="caption">
+            Реальная выдержка. Реальные материалы. Без искусственной имитации
+            ароматов.
+          </p>
+          <p>
+            После ферментации бочка подойдёт для хранения как домашних, так и
+            покупных напитков.
+          </p>
+        </div>
+        <div class="aging-gallery gallery" aria-label="Выдержка и использование">
+          <figure class="gallery-item feature" data-gallery="aging">
+            <div class="image-frame"><img src="Медиа/06 Выдержка и использование/01.png" alt="Фотография выдержки и использования DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="aging">
+            <div class="image-frame"><img src="Медиа/06 Выдержка и использование/02.png" alt="Фотография выдержки и использования DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="aging">
+            <div class="image-frame"><img src="Медиа/06 Выдержка и использование/03.png" alt="Фотография выдержки и использования DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="aging">
+            <div class="image-frame"><img src="Медиа/06 Выдержка и использование/04.png" alt="Фотография выдержки и использования DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="aging">
+            <div class="image-frame"><img src="Медиа/06 Выдержка и использование/05.png" alt="Фотография выдержки и использования DP Barrel & Spirit" /></div>
+          </figure>
+          <figure class="gallery-item" data-gallery="aging">
+            <div class="image-frame"><img src="Медиа/06 Выдержка и использование/06.png" alt="Фотография выдержки и использования DP Barrel & Spirit" /></div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="contacts section-reveal" id="contacts" aria-labelledby="contacts-title">
+        <h2 id="contacts-title">Обсудить будущую бочку</h2>
+        <p>Для заказа и вопросов можно связаться напрямую.</p>
+        <div class="contact-links">
+          <a href="https://t.me/Dprpty">Telegram: @Dprpty</a>
+          <a href="https://www.instagram.com/dp_barrels">Instagram: @dp_barrels</a>
+          <a href="https://www.tiktok.com/@dp__barrels">TikTok: @dp__barrels</a>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Закрыть">×</button>
+      <button class="lightbox-prev" type="button" aria-label="Предыдущее изображение">‹</button>
+      <figure class="lightbox-figure">
+        <img class="lightbox-image" src="" alt="" />
+      </figure>
+      <button class="lightbox-next" type="button" aria-label="Следующее изображение">›</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
