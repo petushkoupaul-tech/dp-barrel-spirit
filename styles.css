@@ -277,6 +277,14 @@ li + li {
   padding: clamp(76px, 9vw, 124px) 0;
 }
 
+.collection {
+  padding-bottom: clamp(24px, 3vw, 44px);
+}
+
+.details {
+  padding-top: clamp(24px, 3vw, 44px);
+}
+
 .section-head.narrow {
   max-width: 900px;
 }
