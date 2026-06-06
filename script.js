@@ -25,6 +25,18 @@ const galleries = new Map();
 let activeGallery = [];
 let activeIndex = 0;
 
+function openGalleryItem(item) {
+  const galleryName = item.dataset.gallery;
+  activeGallery = galleries.get(galleryName) || [];
+  activeIndex = activeGallery.indexOf(item);
+
+  if (activeIndex === -1) {
+    return;
+  }
+
+  openLightbox();
+}
+
 document.querySelectorAll(".gallery-item[data-gallery]").forEach((item) => {
   const galleryName = item.dataset.gallery;
   if (!galleries.has(galleryName)) {
@@ -39,20 +51,13 @@ document.addEventListener("click", (event) => {
     return;
   }
 
-  const galleryName = item.dataset.gallery;
-  activeGallery = galleries.get(galleryName) || [];
-  activeIndex = activeGallery.indexOf(item);
-
-  if (activeIndex === -1) {
-    return;
-  }
-
-  openLightbox();
+  openGalleryItem(item);
 });
 
 document.querySelectorAll(".carousel-track").forEach((track) => {
   let isDragging = false;
   let didDrag = false;
+  let pressedItem = null;
   let dragStartX = 0;
   let startScrollLeft = 0;
 
@@ -76,6 +81,7 @@ document.querySelectorAll(".carousel-track").forEach((track) => {
 
     isDragging = true;
     didDrag = false;
+    pressedItem = event.target.closest(".gallery-item[data-gallery]");
     dragStartX = event.clientX;
     startScrollLeft = track.scrollLeft;
     track.classList.add("is-dragging");
@@ -113,13 +119,20 @@ document.querySelectorAll(".carousel-track").forEach((track) => {
   track.addEventListener(
     "click",
     (event) => {
-      if (!didDrag) {
+      if (didDrag) {
+        event.preventDefault();
+        event.stopPropagation();
+        didDrag = false;
+        pressedItem = null;
         return;
       }
 
-      event.preventDefault();
-      event.stopPropagation();
-      didDrag = false;
+      if (!event.target.closest(".gallery-item[data-gallery]") && pressedItem) {
+        event.preventDefault();
+        event.stopPropagation();
+        openGalleryItem(pressedItem);
+        pressedItem = null;
+      }
     },
     true
   );

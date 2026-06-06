@@ -350,7 +350,27 @@ li + li {
 
 .gallery-item {
   display: grid;
+  width: 100%;
   cursor: zoom-in;
+}
+
+.gallery-item .image-frame {
+  width: 100%;
+  height: clamp(360px, 34vw, 480px);
+  aspect-ratio: auto;
+  border-color: rgba(216, 168, 91, 0.02);
+  background: var(--panel);
+}
+
+.gallery-item .image-frame img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  object-fit: contain;
+}
+
+.gallery-item:hover .image-frame img {
+  transform: none;
 }
 
 .image-frame {
@@ -383,8 +403,8 @@ li + li {
 }
 
 .rail .image-frame {
-  height: auto;
-  aspect-ratio: 4 / 5;
+  height: clamp(360px, 34vw, 480px);
+  aspect-ratio: auto;
   scroll-snap-align: start;
 }
 
