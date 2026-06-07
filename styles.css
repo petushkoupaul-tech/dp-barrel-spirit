@@ -348,12 +348,12 @@ li + li {
 
 .rail {
   display: grid;
-  grid-auto-columns: minmax(330px, 34vw);
+  grid-auto-columns: minmax(340px, 36vw);
   grid-auto-flow: column;
   gap: 24px;
   width: 100%;
   margin-top: 46px;
-  padding: 0 max(22px, calc((100vw - var(--max)) / 2)) 30px;
+  padding: 0 max(18px, calc((100vw - (var(--max) + 80px)) / 2)) 28px;
 }
 
 .gallery-item {
@@ -418,7 +418,9 @@ li + li {
 
 .carousel-shell {
   position: relative;
-  margin-top: 46px;
+  margin-top: 28px;
+  padding-block: 18px;
+  border-block: 1px solid rgba(216, 168, 91, 0.12);
 }
 
 .carousel-controls {
@@ -516,12 +518,12 @@ li + li {
 
 .workshop-gallery {
   display: grid;
-  grid-auto-columns: minmax(310px, 32vw);
+  grid-auto-columns: minmax(340px, 36vw);
   grid-auto-flow: column;
   gap: 20px;
   width: 100%;
-  margin-top: 46px;
-  padding-bottom: 24px;
+  margin-top: 0;
+  padding: 0 max(18px, calc((100vw - (var(--max) + 80px)) / 2)) 28px;
 }
 
 .workshop-gallery .image-frame {
@@ -694,7 +696,7 @@ li + li {
   }
 
   .rail {
-    grid-auto-columns: minmax(280px, 72vw);
+    grid-auto-columns: minmax(290px, 74vw);
   }
 
   .materials-intro,
@@ -738,7 +740,7 @@ li + li {
   }
 
   .workshop-gallery {
-    grid-auto-columns: minmax(280px, 58vw);
+    grid-auto-columns: minmax(300px, 64vw);
   }
 }
 
