@@ -274,7 +274,7 @@ li + li {
 .workshop,
 .aging,
 .contacts {
-  padding: clamp(76px, 9vw, 124px) 0;
+  padding: clamp(56px, 6.75vw, 92px) 0;
 }
 
 .collection {
@@ -579,11 +579,41 @@ li + li {
 }
 
 .contacts {
+  width: 100%;
   min-height: 60vh;
+  overflow: hidden;
   display: grid;
   align-content: center;
   justify-items: center;
+  isolation: isolate;
+  background-image: url("Медиа/07 Контакты и финальный банер/banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   text-align: center;
+}
+
+.contacts::before,
+.contacts::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contacts::before {
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(8, 5, 3, 0.34), rgba(8, 5, 3, 0.52));
+}
+
+.contacts::after {
+  z-index: 1;
+  background: radial-gradient(ellipse at center, rgba(7, 5, 4, 0.02) 34%, rgba(7, 5, 4, 0.42) 100%);
+}
+
+.contacts > * {
+  position: relative;
+  z-index: 2;
 }
 
 .contacts p {
@@ -742,6 +772,12 @@ li + li {
   .workshop-gallery {
     grid-auto-columns: minmax(300px, 64vw);
   }
+
+  .contacts {
+    min-height: 64vh;
+    background-size: auto 100%;
+    background-position: center center;
+  }
 }
 
 @media (max-width: 620px) {
@@ -781,7 +817,7 @@ li + li {
   .workshop,
   .aging,
   .contacts {
-    padding-block: 82px;
+    padding-block: 62px;
   }
 
   .section-copy,
@@ -838,6 +874,15 @@ li + li {
 
   .contact-links {
     display: grid;
+  }
+
+  .contacts {
+    min-height: 70vh;
+    background-size: auto 100%;
+  }
+
+  .contacts::before {
+    background: linear-gradient(180deg, rgba(8, 5, 3, 0.42), rgba(8, 5, 3, 0.6));
   }
 
   .lightbox {
