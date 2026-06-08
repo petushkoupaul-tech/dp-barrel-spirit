@@ -1,0 +1,277 @@
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Тексты/03 Коллекция изделий.txt', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/index.html b/index.html[m
+[1mindex bbfb3e1..f186fc1 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -85,8 +85,8 @@[m
+             <h3>Материалы и характеристики</h3>[m
+             <div class="materials-intro">[m
+               <p>[m
+[31m-                Каждое изделие создаётся с вниманием к материалу, форме и[m
+[31m-                характеру древесины.[m
+[32m+[m[32m                Каждое изделие создаётся вручную — от выбора материала до[m
+[32m+[m[32m                финальной отделки с вниманием ко всем деталям.[m
+               </p>[m
+               <p>[m
+                 Для покрытия поверхности применяются авторские технологии[m
+[36m@@ -100,7 +100,7 @@[m
+             </div>[m
+             <div class="materials-grid">[m
+               <div class="material-group">[m
+[31m-                <h4>Используемые породы древесины</h4>[m
+[32m+[m[32m                <h4>Используемая древесина</h4>[m
+                 <ul>[m
+                   <li>дуб</li>[m
+                   <li>ясень</li>[m
+[36m@@ -108,7 +108,7 @@[m
+                 </ul>[m
+               </div>[m
+               <div class="material-group">[m
+[31m-                <h4>Комбинированные варианты</h4>[m
+[32m+[m[32m                <h4>Комбинированные варианты:</h4>[m
+                 <ul>[m
+                   <li>акация / ясень</li>[m
+                   <li>дуб / ясень</li>[m
+[36m@@ -118,28 +118,18 @@[m
+               <div class="material-group wide">[m
+                 <h4>Форма и геометрия</h4>[m
+                 <ul>[m
+[31m-                  <li>Испанская форма Sherry Butt</li>[m
+[31m-                  <li>[m
+[31m-                    Вытянутая форма с удлинённой клёпкой, вдохновлённая[m
+[31m-                    традиционной геометрией испанских бочек.[m
+[31m-                  </li>[m
+[31m-                  <li>Классическая форма ("Русский стиль")</li>[m
+[31m-                  <li>[m
+[31m-                    Традиционная округлая форма со сбалансированными[m
+[31m-                    пропорциями.[m
+[31m-                  </li>[m
+[32m+[m[32m                  <li>Испанская форма Sherry Butt (вытянутая с удлинённой клёпкой)</li>[m
+[32m+[m[32m                  <li>Классическая форма ("русский" стиль)</li>[m
+[32m+[m[32m                  <li>Индивидуальные комбинации по запросу</li>[m
+                 </ul>[m
+               </div>[m
+[31m-              <div class="material-group">[m
+[31m-                <h4>Объёмы</h4>[m
+[32m+[m[32m              <div class="material-group wide">[m
+[32m+[m[32m                <h4>Объёмы и комплектация</h4>[m
+                 <ul>[m
+                   <li>от 2 до 70 литров</li>[m
+[32m+[m[32m                  <li>Краны и металические элементы из пищевой нержавеющей стали</li>[m
+                 </ul>[m
+               </div>[m
+[31m-              <div class="material-group">[m
+[31m-                <h4>Металлические элементы</h4>[m
+[31m-                <p>Краны и комплектующие из пищевой нержавеющей стали.</p>[m
+[31m-              </div>[m
+             </div>[m
+           </div>[m
+         </div>[m
+[1mdiff --git a/styles.css b/styles.css[m
+[1mindex d541101..ff68160 100644[m
+[1m--- a/styles.css[m
+[1m+++ b/styles.css[m
+[36m@@ -289,17 +289,25 @@[m [mli + li {[m
+   max-width: 900px;[m
+ }[m
+ [m
+[32m+[m[32m.collection .section-head > h2::after {[m
+[32m+[m[32m  display: block;[m
+[32m+[m[32m  width: min(680px, 100%);[m
+[32m+[m[32m  height: 1px;[m
+[32m+[m[32m  margin-top: 18px;[m
+[32m+[m[32m  background: linear-gradient(90deg, var(--gold), rgba(216, 168, 91, 0.18));[m
+[32m+[m[32m  content: "";[m
+[32m+[m[32m}[m
+[32m+[m
+ .materials-note {[m
+   display: grid;[m
+[31m-  gap: 22px;[m
+[32m+[m[32m  gap: 18px;[m
+   max-width: var(--max);[m
+[31m-  margin-top: 26px;[m
+[31m-  padding-top: 22px;[m
+[31m-  border-top: 1px solid var(--line);[m
+[32m+[m[32m  margin-top: 20px;[m
+ }[m
+ [m
+ .materials-note h3 {[m
+   color: var(--ink);[m
+[32m+[m[32m  font-size: 1.52rem;[m
+ }[m
+ [m
+ .materials-note p {[m
+[36m@@ -308,23 +316,48 @@[m [mli + li {[m
+ [m
+ .materials-intro {[m
+   display: grid;[m
+[31m-  grid-template-columns: repeat(3, minmax(0, 1fr));[m
+[31m-  gap: 18px;[m
+[32m+[m[32m  gap: 8px;[m
+[32m+[m[32m  max-width: 760px;[m
+ }[m
+ [m
+ .materials-grid {[m
+   display: grid;[m
+[31m-  grid-template-columns: repeat(4, minmax(0, 1fr));[m
+[31m-  gap: 20px 26px;[m
+[32m+[m[32m  grid-template-columns: 0.92fr 1.08fr 1.08fr;[m
+[32m+[m[32m  gap: 0;[m
+   align-items: start;[m
+[32m+[m[32m  margin-top: 10px;[m
+[32m+[m[32m  padding-top: 24px;[m
+ }[m
+ [m
+ .material-group {[m
+   min-width: 0;[m
+[32m+[m[32m  padding-inline: clamp(22px, 2.8vw, 38px);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.material-group:first-child {[m
+[32m+[m[32m  padding-left: 0;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.material-group:nth-child(2) {[m
+[32m+[m[32m  grid-column: 1;[m
+[32m+[m[32m  padding-top: 16px;[m
+[32m+[m[32m  padding-left: 0;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.material-group:nth-child(3) {[m
+[32m+[m[32m  grid-column: 2;[m
+[32m+[m[32m  grid-row: 1 / span 2;[m
+[32m+[m[32m  border-right: 1px solid rgba(216, 168, 91, 0.22);[m
+[32m+[m[32m  border-left: 1px solid rgba(216, 168, 91, 0.22);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.material-group:nth-child(4) {[m
+[32m+[m[32m  grid-column: 3;[m
+[32m+[m[32m  grid-row: 1 / span 2;[m
+ }[m
+ [m
+ .material-group.wide {[m
+[31m-  grid-column: span 2;[m
+[32m+[m[32m  grid-column: auto;[m
+ }[m
+ [m
+ .material-group h4 {[m
+[36m@@ -859,8 +892,31 @@[m [mli + li {[m
+     grid-template-columns: repeat(2, minmax(0, 1fr));[m
+   }[m
+ [m
+[32m+[m[32m  .materials-grid {[m
+[32m+[m[32m    gap: 22px 0;[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  .material-group,[m
+[32m+[m[32m  .material-group:nth-child(2),[m
+[32m+[m[32m  .material-group:nth-child(3),[m
+[32m+[m[32m  .material-group:nth-child(4) {[m
+[32m+[m[32m    grid-column: auto;[m
+[32m+[m[32m    grid-row: auto;[m
+[32m+[m[32m    padding-inline: 20px;[m
+[32m+[m[32m    border-right: 0;[m
+[32m+[m[32m    border-left: 0;[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  .material-group:nth-child(odd) {[m
+[32m+[m[32m    padding-left: 0;[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  .material-group:nth-child(2) {[m
+[32m+[m[32m    padding-top: 0;[m
+[32m+[m[32m  }[m
+[32m+[m
+   .material-group.wide {[m
+[31m-    grid-column: span 2;[m
+[32m+[m[32m    grid-column: auto;[m
+   }[m
+ [m
+   .image-section {[m
+[36m@@ -966,6 +1022,24 @@[m [mli + li {[m
+     grid-template-columns: 1fr;[m
+   }[m
+ [m
+[32m+[m[32m  .materials-grid {[m
+[32m+[m[32m    gap: 18px;[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  .material-group,[m
+[32m+[m[32m  .material-group:nth-child(2),[m
+[32m+[m[32m  .material-group:nth-child(3),[m
+[32m+[m[32m  .material-group:nth-child(4) {[m
+[32m+[m[32m    padding: 16px 0 0;[m
+[32m+[m[32m    border-top: 0;[m
+[32m+[m[32m    border-right: 0;[m
+[32m+[m[32m    border-left: 0;[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  .material-group:first-child {[m
+[32m+[m[32m    padding-top: 0;[m
+[32m+[m[32m  }[m
+[32m+[m
+   .material-group.wide {[m
+     grid-column: auto;[m
+   }[m
+[1mdiff --git "a/\320\242\320\265\320\272\321\201\321\202\321\213/03 \320\232\320\276\320\273\320\273\320\265\320\272\321\206\320\270\321\217 \320\270\320\267\320\264\320\265\320\273\320\270\320\271.txt" "b/\320\242\320\265\320\272\321\201\321\202\321\213/03 \320\232\320\276\320\273\320\273\320\265\320\272\321\206\320\270\321\217 \320\270\320\267\320\264\320\265\320\273\320\270\320\271.txt"[m
+[1mindex 36ab0b6..c8f3923 100644[m
+[1m--- "a/\320\242\320\265\320\272\321\201\321\202\321\213/03 \320\232\320\276\320\273\320\273\320\265\320\272\321\206\320\270\321\217 \320\270\320\267\320\264\320\265\320\273\320\270\320\271.txt"[m	
+[1m+++ "b/\320\242\320\265\320\272\321\201\321\202\321\213/03 \320\232\320\276\320\273\320\273\320\265\320\272\321\206\320\270\321\217 \320\270\320\267\320\264\320\265\320\273\320\270\320\271.txt"[m	
+[36m@@ -22,11 +22,12 @@[m
+ Материалы и характеристики[m
+  [m
+ [m
+[31m-Каждое изделие создаётся с вниманием к материалу, форме и характеру древесины.[m
+[32m+[m[32mКаждое изделие создаётся вручную - от выбора материала до финальной отделки с вниманием ко всем деталям.[m
+ Для покрытия поверхности применяются авторские технологии обработки, основанные на натуральных и долговечных материалах.[m
+[31m-Благодаря этой технике каждая бочка приобретает свой уникальный и неповторимый вид, а текстура дерева открывается с новой стороны.[m
+[32m+[m[32mБлагодаря этой технике каждая бочка приобретает свой уникальный и неповторимый вид,[m
+[32m+[m[32mа текстура дерева открывается с новой стороны.[m
+ [m
+[31m-Используемые породы древесины:[m
+[32m+[m[32mИспользуемая древесина:[m
+ [m
+ • дуб[m
+ [m
+[36m@@ -34,29 +35,24 @@[m
+ [m
+ • акация[m
+ [m
+[31m-Комбинированные варианты:[m
+[31m-[m
+[31m-• акация / ясень[m
+[31m-[m
+[31m-• дуб / ясень[m
+[31m-[m
+[31m-• акация / дуб / ясень[m
+[32m+[m[32m•комбинированные варианты[m
+[32m+[m[32m акация / ясень[m
+[32m+[m[32m дуб / ясень[m
+[32m+[m[32m акация / дуб / ясень[m
+ [m
+ Форма и геометрия:[m
+ [m
+ • Испанская форма Sherry Butt[m
+[32m+[m[32m (вытянутая с удлинённой клёпкой)[m
+ [m
+[31m-• Вытянутая форма с удлинённой клёпкой, вдохновлённая традиционной геометрией испанских бочек.[m
+[32m+[m[32m• Классическая форма ("русский" стиль)[m
+ [m
+[31m-• Классическая форма ("Русский стиль")[m
+[32m+[m[32m• Индивидуальные комбинации[m
+[32m+[m[32m  по запросу[m
+ [m
+[31m-• Традиционная округлая форма со сбалансированными пропорциями.[m
+[31m-[m
+[31m-Объёмы:[m
+[32m+[m[32mОбъёмы и комплектация:[m
+ [m
+ • от 2 до 70 литров[m
+ [m
+[31m-Металлические элементы:[m
+[31m-[m
+[31m-Краны и комплектующие из пищевой нержавеющей стали [m
+[32m+[m[32m• Краны и металические элементы из пищевой нержавеющей стали[m[41m [m
+ [m

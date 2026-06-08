@@ -289,17 +289,25 @@ li + li {
   max-width: 900px;
 }
 
+.collection .section-head > h2::after {
+  display: block;
+  width: min(680px, 100%);
+  height: 1px;
+  margin-top: 18px;
+  background: linear-gradient(90deg, var(--gold), rgba(216, 168, 91, 0.18));
+  content: "";
+}
+
 .materials-note {
   display: grid;
-  gap: 22px;
+  gap: 18px;
   max-width: var(--max);
-  margin-top: 26px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
+  margin-top: 20px;
 }
 
 .materials-note h3 {
   color: var(--ink);
+  font-size: 1.52rem;
 }
 
 .materials-note p {
@@ -308,23 +316,48 @@ li + li {
 
 .materials-intro {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 8px;
+  max-width: 760px;
 }
 
 .materials-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px 26px;
+  grid-template-columns: 0.92fr 1.08fr 1.08fr;
+  gap: 0;
   align-items: start;
+  margin-top: 10px;
+  padding-top: 24px;
 }
 
 .material-group {
   min-width: 0;
+  padding-inline: clamp(22px, 2.8vw, 38px);
+}
+
+.material-group:first-child {
+  grid-column: 3;
+}
+
+.material-group:nth-child(2) {
+  grid-column: 3;
+  padding-top: 16px;
+}
+
+.material-group:nth-child(3) {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  padding-left: 0;
+}
+
+.material-group:nth-child(4) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  border-right: 1px solid rgba(216, 168, 91, 0.22);
+  border-left: 1px solid rgba(216, 168, 91, 0.22);
 }
 
 .material-group.wide {
-  grid-column: span 2;
+  grid-column: auto;
 }
 
 .material-group h4 {
@@ -859,8 +892,31 @@ li + li {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .materials-grid {
+    gap: 22px 0;
+  }
+
+  .material-group,
+  .material-group:nth-child(2),
+  .material-group:nth-child(3),
+  .material-group:nth-child(4) {
+    grid-column: auto;
+    grid-row: auto;
+    padding-inline: 20px;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .material-group:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .material-group:nth-child(2) {
+    padding-top: 0;
+  }
+
   .material-group.wide {
-    grid-column: span 2;
+    grid-column: auto;
   }
 
   .image-section {
@@ -964,6 +1020,24 @@ li + li {
   .materials-intro,
   .materials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .materials-grid {
+    gap: 18px;
+  }
+
+  .material-group,
+  .material-group:nth-child(2),
+  .material-group:nth-child(3),
+  .material-group:nth-child(4) {
+    padding: 16px 0 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .material-group:first-child {
+    padding-top: 0;
   }
 
   .material-group.wide {
