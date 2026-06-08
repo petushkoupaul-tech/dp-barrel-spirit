@@ -416,6 +416,25 @@ li + li {
   scroll-snap-align: start;
 }
 
+.collection .rail .image-frame,
+.workshop-gallery .image-frame {
+  border: 1px solid rgba(216, 168, 91, 0.2);
+  background:
+    linear-gradient(var(--gold), var(--gold)) left top / 28px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left top / 1px 28px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right top / 28px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right top / 1px 28px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left bottom / 28px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left bottom / 1px 28px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right bottom / 28px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right bottom / 1px 28px no-repeat,
+    radial-gradient(circle at 50% 38%, rgba(84, 48, 28, 0.2), transparent 70%),
+    rgba(14, 10, 8, 0.62);
+  box-shadow:
+    inset 0 0 0 1px rgba(216, 168, 91, 0.045),
+    inset 0 18px 42px rgba(0, 0, 0, 0.22);
+}
+
 .carousel-shell {
   position: relative;
   margin-top: 28px;
@@ -476,8 +495,22 @@ li + li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  width: min(var(--max), calc(100% - 44px));
+  width: min(calc(var(--max) + 72px), calc(100% - 44px));
   margin: 46px auto 0;
+  padding: clamp(24px, 2.8vw, 36px);
+  border: 1px solid rgba(216, 168, 91, 0.18);
+  background:
+    linear-gradient(var(--gold), var(--gold)) left top / 42px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left top / 1px 42px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right top / 42px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right top / 1px 42px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left bottom / 42px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left bottom / 1px 42px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right bottom / 42px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right bottom / 1px 42px no-repeat,
+    linear-gradient(180deg, rgba(216, 168, 91, 0.045), rgba(216, 168, 91, 0.012)),
+    rgba(14, 10, 8, 0.58);
+  box-shadow: inset 0 0 0 1px rgba(216, 168, 91, 0.035);
 }
 
 .detail-layout .image-frame {
