@@ -616,8 +616,9 @@ li + li {
 
 #aging-title {
   max-width: 100%;
-  font-size: clamp(2.55rem, 4.6vw, 4.7rem);
+  font-size: clamp(2.7rem, 4.75vw, 4.85rem);
   line-height: 0.86;
+  transform: translateY(-20px);
 }
 
 .aging-copy h2 + p {
