@@ -1,11 +1,7 @@
 :root {
   --ink: #f5efe4;
-  --muted: #b9aa96;
   --line: rgba(230, 195, 132, 0.24);
   --gold: #d8a85b;
-  --deep: #0e0b09;
-  --charcoal: #16120f;
-  --wood: #20150f;
   --panel: #15100d;
   --max: 1180px;
 }
@@ -403,10 +399,6 @@ li + li {
   object-fit: contain;
 }
 
-.gallery-item:hover .image-frame img {
-  transform: none;
-}
-
 .image-frame {
   position: relative;
   overflow: hidden;
@@ -427,13 +419,6 @@ li + li {
 .gallery-item:hover .image-frame img {
   filter: saturate(1.04) contrast(1.03);
   transform: scale(1.035);
-}
-
-.gallery-item figcaption {
-  color: rgba(245, 239, 228, 0.74);
-  font-size: 0.84rem;
-  font-weight: 500;
-  line-height: 1.45;
 }
 
 .rail .image-frame {
