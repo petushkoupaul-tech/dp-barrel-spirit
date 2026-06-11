@@ -613,7 +613,7 @@ li + li {
 
 #aging-title {
   max-width: 100%;
-  font-size: clamp(2.7rem, 4.75vw, 4.85rem);
+  font-size: clamp(2.835rem, 4.9875vw, 5.0925rem);
   line-height: 0.86;
   transform: translateY(-20px);
 }
@@ -801,8 +801,8 @@ li + li {
 .contact-links a {
   padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
-  color: rgba(245, 239, 228, 0.88);
-  font-size: 1.06rem;
+  color: rgba(249, 245, 238, 0.97);
+  font-size: 1.17rem;
   font-weight: 600;
 }
 
