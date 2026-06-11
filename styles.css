@@ -556,6 +556,10 @@ li + li {
   width: 100%;
 }
 
+.workshop-copy > div:first-child {
+  transform: translateY(-10px);
+}
+
 .workshop-text {
   min-width: 0;
 }
@@ -700,6 +704,14 @@ li + li {
   padding: 16px;
   border: 1px solid rgba(216, 168, 91, 0.1);
   background:
+    linear-gradient(var(--gold), var(--gold)) left top / 32px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left top / 1px 32px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right top / 32px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right top / 1px 32px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left bottom / 32px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left bottom / 1px 32px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right bottom / 32px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right bottom / 1px 32px no-repeat,
     linear-gradient(180deg, rgba(216, 168, 91, 0.05), rgba(216, 168, 91, 0.015)),
     rgba(14, 10, 8, 0.62);
 }
@@ -755,12 +767,16 @@ li + li {
 
 .contacts::before {
   z-index: 0;
-  background: linear-gradient(180deg, rgba(8, 5, 3, 0.34), rgba(8, 5, 3, 0.52));
+  background:
+    linear-gradient(180deg, rgba(12, 8, 6, 1) 0%, rgba(12, 8, 6, 0.78) 9%, rgba(12, 8, 6, 0.32) 18%, rgba(12, 8, 6, 0) 25%),
+    linear-gradient(180deg, rgba(8, 5, 3, 0.26), rgba(8, 5, 3, 0.5));
 }
 
 .contacts::after {
   z-index: 1;
-  background: radial-gradient(ellipse at center, rgba(7, 5, 4, 0.02) 34%, rgba(7, 5, 4, 0.42) 100%);
+  background:
+    radial-gradient(ellipse at center, rgba(7, 5, 4, 0.32) 0%, rgba(7, 5, 4, 0.18) 26%, rgba(7, 5, 4, 0) 52%),
+    radial-gradient(ellipse at center, rgba(7, 5, 4, 0) 38%, rgba(7, 5, 4, 0.36) 100%);
 }
 
 .contacts > * {
@@ -770,6 +786,8 @@ li + li {
 
 .contacts p {
   margin-inline: auto;
+  font-size: 1.15rem;
+  line-height: 1.76;
 }
 
 .contact-links {
@@ -784,7 +802,7 @@ li + li {
   padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
   color: rgba(245, 239, 228, 0.88);
-  font-size: 0.92rem;
+  font-size: 1.06rem;
   font-weight: 600;
 }
 
@@ -1089,7 +1107,9 @@ li + li {
   }
 
   .contacts::before {
-    background: linear-gradient(180deg, rgba(8, 5, 3, 0.42), rgba(8, 5, 3, 0.6));
+    background:
+      linear-gradient(180deg, rgba(12, 8, 6, 1) 0%, rgba(12, 8, 6, 0.82) 10%, rgba(12, 8, 6, 0.34) 19%, rgba(12, 8, 6, 0) 25%),
+      linear-gradient(180deg, rgba(8, 5, 3, 0.34), rgba(8, 5, 3, 0.58));
   }
 
   .lightbox {
