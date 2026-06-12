@@ -973,12 +973,25 @@ li + li {
   }
 
   .hero {
-    min-height: 78vh;
-    padding: 128px 18px 42px;
+    min-height: 74vh;
+    padding: 112px 18px 38px;
+  }
+  
+  .hero-content {
+  transform: translateY(-30px);
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.6rem;
+  }
+
+  #hero-title {
+    font-size: 3.25rem;
+    line-height: 0.94;
+    max-width: 320px;
+    margin-inline: auto;
+    text-align: center;
+    transform: none;
   }
 
   h2 {
