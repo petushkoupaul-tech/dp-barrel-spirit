@@ -1009,12 +1009,12 @@ li + li {
 
   .about > img {
     object-fit: cover;
-    object-position: 83% center;
-    transform: scale(1.06);
+    object-position: 90% center;
+    transform: scale(1.04);
   }
 
   .about:hover > img {
-    transform: scale(1.06);
+    transform: scale(1.04);
   }
 
   .section-copy,
