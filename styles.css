@@ -960,7 +960,7 @@ li + li {
   }
 
   .site-header {
-    padding: 18px;
+    display: none;
   }
 
   .brand-mark {
