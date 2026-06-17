@@ -580,6 +580,7 @@ li + li {
   scroll-snap-align: start;
 }
 
+#collection-carousel .image-frame::after,
 #workshop-carousel .image-frame::after {
   content: "";
   position: absolute;
