@@ -580,6 +580,23 @@ li + li {
   scroll-snap-align: start;
 }
 
+#workshop-carousel .image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--gold), var(--gold)) left top / 28px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left top / 1px 28px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right top / 28px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right top / 1px 28px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left bottom / 28px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) left bottom / 1px 28px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right bottom / 28px 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) right bottom / 1px 28px no-repeat;
+}
+
 .aging {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
